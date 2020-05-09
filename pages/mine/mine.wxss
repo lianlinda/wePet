@@ -1,0 +1,40 @@
+/* pages/mine/mine.wxss */
+.m-mine {
+  height: 100%;
+}
+.card {
+  display: flex;
+  align-items: center;
+  height: 200rpx;
+  margin-bottom: 20rpx;
+  background: #f32743;
+  border-radius: 16rpx;
+  color: #fff;
+}
+.head {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0 20rpx;
+}
+.order{
+  padding-top: 20rpx;
+  border-radius: 16rpx;
+}
+.order-title{
+  padding: 0 20rpx;
+}
+.order-item {
+  display: flex;
+  padding: 20rpx 0;
+}
+.order-item .order-list-item {
+  flex-grow: 1;
+  color: #bbb;
+  font-size: 12px;
+  text-align: center;
+}
+
+.list{
+  border-radius: 16rpx;
+  overflow: hidden;
+}

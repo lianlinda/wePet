@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/mine/mine",
+    "pages/bag/bag",
+    "pages/index/index",
+    "pages/goods/detail/detail",
+    "pages/search/search"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "微宠城",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#bbb",
+    "selectedColor": "#e60a30",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/img/tab/index.png",
+        "selectedIconPath": "static/img/tab/select-index.png"
+      },
+      {
+        "pagePath": "pages/bag/bag",
+        "text": "购物袋",
+        "iconPath": "static/img/tab/bag.png",
+        "selectedIconPath": "static/img/tab/select-bag.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "static/img/tab/mine.png",
+        "selectedIconPath": "static/img/tab/select-mine.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

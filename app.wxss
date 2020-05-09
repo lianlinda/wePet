@@ -1,0 +1,96 @@
+/**app.wxss**/
+@import './static/font/iconfont.wxss';
+page {
+  height: 100%;
+  background: #f4f4f4;
+}
+/*布局信息*/
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix{
+  overflow: hidden;
+}
+.p20{
+  padding: 20rpx;
+}
+.pb20{
+  padding-bottom: 20rpx;
+}
+.mlr20{
+  margin: 0 20rpx;
+}
+.mt5{
+  margin-top: 5rpx;
+}
+.mt20 {
+  margin-top: 20rpx;
+}
+.mb20{
+  margin-bottom: 20rpx;
+}
+
+/*文字类-布局信息*/
+.tc {
+  text-align: center;
+}
+.two-line-text{
+  overflow: hidden;
+  display: -webkit-box; /*将对象作为弹性伸缩盒子模型显示*/
+  text-overflow: ellipsis;/*溢出部分用省略号代替*/
+  -webkit-line-clamp: 2;/*设置文本显示两行*/
+  -webkit-box-orient: vertical;/*从上到下排列子元素*/
+  white-space: normal;
+  text-align: left;
+}
+.fs12{
+  font-size: 24rpx;
+}
+.fs14{
+  font-size: 28rpx;
+}
+.fs16{
+  font-size: 32rpx;
+}
+.fs30{
+  font-size: 60rpx;
+}
+/*文字颜色*/
+.text-red {
+  color: #e60a30;
+}
+.text-gray {
+  color: #bbb;
+}
+
+/*背景色*/
+.bg-gray{
+  background-color: #bbb;
+}
+.bg-white{
+  background-color: white;
+}
+
+/*按钮类*/
+.btn{
+  background: #e60a30;
+  color: #fff;
+}
+.btn-pink{
+  background: #f04965;
+  color: #fff;
+}
+.btn-yellow{
+  background: #FFA500;
+  color: #fff;
+}
+
+/*隐藏滚动条*/
+::-webkit-scrollbar{
+  width:0;
+  height:0;
+  color:transparent;
+}

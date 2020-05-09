@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "购物袋",
+  "usingComponents": {
+    "van-stepper": "@vant/weapp/stepper",
+    "van-popup": "@vant/weapp/popup"
+  }
+}

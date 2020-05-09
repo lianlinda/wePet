@@ -1,0 +1,59 @@
+<!--pages/mine/mine.wxml-->
+<scroll-view class='m-mine' scroll-y>
+  <view class='p20'>
+    <view class='card'>
+      <image class="head" src="/static/img/mine/head.png"/>
+      <view>
+        <view wx:if="{{!islogin}}" class="fs16">
+          未登录
+          <view class='fs12 mt5'>点击登录/注册账户</view>
+        </view>
+        <view wx:else>
+          用户姓名
+          <view>退出登录</view>
+        </view>
+      </view>
+    </view>
+    <view class='bg-white order fs14'>
+      <view class='order-title'>
+        我的订单
+        <view class='fr'>
+          查看全部
+          <text class="iconfont icon-xuanze fs14"/>
+        </view>
+      </view>
+      <view class='order-item'>
+        <view class='order-list-item'>
+          <view class="iconfont icon-daifukuan- fs30"/>
+          <text>待付款</text>
+        </view>
+        <view class='order-list-item'>
+          <view class="iconfont icon-daifahuo fs30"/>
+          待发货
+        </view>
+        <view class='order-list-item'>
+          <view class="iconfont icon-daishouhuo fs30"/>
+          待收货
+        </view>
+        <view class='order-list-item'>
+          <view class="iconfont icon-daipingjia fs30"/>
+          待评价
+        </view>
+        <view class='order-list-item'>
+          <view class="iconfont icon-tuikuan fs30"/>
+          退款/售后
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="list mlr20">
+    <van-cell title="我的拼团" is-link/>
+    <van-cell title="我的地址" is-link/>
+    <van-cell title="卡券包" is-link/>
+    <van-cell title="我的宠币" is-link/>
+    <van-cell title="邀请赚钱" is-link/>
+  </view>
+  <view class="list mlr20 mt20">
+    <van-cell title="联系客服" is-link/>
+  </view>
+</scroll-view>
