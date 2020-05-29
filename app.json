@@ -1,7 +1,7 @@
 {
   "pages": [
+    "pages/cart/cart",
     "pages/mine/mine",
-    "pages/bag/bag",
     "pages/index/index",
     "pages/goods/detail/detail",
     "pages/search/search"
@@ -23,8 +23,8 @@
         "selectedIconPath": "static/img/tab/select-index.png"
       },
       {
-        "pagePath": "pages/bag/bag",
-        "text": "购物袋",
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
         "iconPath": "static/img/tab/bag.png",
         "selectedIconPath": "static/img/tab/select-bag.png"
       },

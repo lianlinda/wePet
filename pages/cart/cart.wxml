@@ -1,22 +1,22 @@
 <!--pages/shoppingBag/shoppingBag.wxml-->
-<scroll-view class='m-bag' scroll-y>
+<scroll-view class='m-cart' scroll-y>
   <!--网速不好-->
   <view wx:if="{{!netOK}}" class='h100 bg-white error-c'>
-   <image class="empty" src="/static/img/bag/netError.png"/>
+    <image class="empty" src="/static/img/cart/netError.png"/>
     <view class='tc fs14 text-gray'>网络不太顺畅，请刷新试试</view>
-    <button class='reload-button'>重新加载</button>
+    <van-button round>重新加载</van-button>
   </view>
   <view wx:else>
     <!--没有登录-->
-    <view wx:if="{{!isLogin}}" class='bg-white ptb100'>
-      <image class="empty" src="/static/img/bag/empty.png"/>
+    <view wx:if="{{!isLogin}}" class='bg-white ptb100' style="text-align: center">
+      <image class="empty" src="/static/img/cart/empty.png"/>
       <view class='tc fs14 text-gray'>登录后将显示您之前加入的商品</view>
-      <button class='login-button btn'>去登录</button>
+      <van-button round color="#e60a30">去登录</van-button>
     </view>
     <view wx:else>
       <!--购物车是空的-->
       <view wx:if="{{isEmpty}}" class='bg-white ptb100'>
-        <image class="empty" src="/static/img/bag/empty.png"/>
+        <image class="empty" src="/static/img/cart/empty.png"/>
         <view class='tc fs14 text-gray'>购物车空空荡荡，快去商城逛逛吧</view>
         <button class='login-button btn'>去首页</button>
       </view>
@@ -71,12 +71,18 @@
       </view>
     </view>
     <!--底部合计-->
-    <view class='bottom-c' wx:if="{{isLogin && !isEmpty}}">
+    <!-- <view class='bottom-c' wx:if="{{isLogin && !isEmpty}}">
       <view class='bottom-left'>
         <radio color='{{radioColor}}'/><label>全选</label>
         <text class='fr'>合计：{{sumMoney}}</text>
       </view>
       <button class='btn pay'>结算</button>
-    </view>
+    </view> -->
+    <van-submit-bar
+      wx:if="{{isLogin && !isEmpty}}"
+      price="{{ 3050 }}"
+      button-text="结算"
+      bind:submit="onSubmit"
+    ></van-submit-bar>
   </view>
 </scroll-view>

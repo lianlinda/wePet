@@ -6,8 +6,8 @@ Page({
    */
   data: {
     netOK: true,// 网络是否ok
-    isLogin: true,//是否登录
-    isEmpty: false,//购物车是否为空
+    isLogin: false,//是否登录
+    isEmpty: true,//购物车是否为空
     isEdit: false,//是否编辑
     radioColor: '#e60a30',
     sumMoney: 0,

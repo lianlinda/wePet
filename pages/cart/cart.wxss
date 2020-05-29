@@ -1,5 +1,5 @@
 /* pages/shoppingBag/shoppingBag.wxss */
-.m-bag {
+.m-cart {
   height: 100%;
   position: relative;
 }
@@ -20,8 +20,8 @@ radio {
 }
 .empty {
   display: block;
-  width: 200rpx;
-  height: 200rpx;
+  width: 180rpx;
+  height: 180rpx;
   margin: 0 auto 30rpx;
 }
 .login-button {
@@ -56,9 +56,6 @@ radio {
 .goods-wrap {
   display: flex;
   align-items: center;
-}
-.stand-s{
-
 }
 .goods-right{
   padding: 0 20rpx;

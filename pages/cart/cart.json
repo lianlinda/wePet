@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "购物车",
+  "usingComponents": {
+    "van-stepper": "@vant/weapp/stepper",
+    "van-popup": "@vant/weapp/popup",
+    "van-submit-bar": "@vant/weapp/submit-bar",
+    "van-button": "@vant/weapp/button"
+  }
+}
