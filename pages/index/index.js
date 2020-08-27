@@ -6,19 +6,24 @@ Page({
    */
   data: {
     searchText: '搜索：商品 分类 品牌 国家',
-    topThemeColor: '#fff',
+    topTheme: {
+      color: '#fff',
+      light: '#fff'
+    },
     banner: [
       {
         id: 1,
         image: 'https://img.alicdn.com/tfs/TB1_YIeaq5s3KVjSZFNXXcD3FXa-520-280.jpg_q90_.webp',
         url: 'www.baidu.com',
-        themeColor: '#00b33c'
+        themeColor: '#00b33c',
+        themeLightColor: '#80ffaa'
       },
       {
         id: 2,
         image: 'https://img.alicdn.com/tfs/TB1aQH0aECF3KVjSZJnXXbnHFXa-520-280.jpg_q90_.webp',
         url: 'www.baidu.com',
-        themeColor: '#862c86'
+        themeColor: '#862c86',
+        themeLightColor: '#e6b2e6'
       }
     ],
     bannerAutoPlay: false, // banner是否自动播放
@@ -189,7 +194,9 @@ Page({
   },
   // swiper变化
   onSwiperChange(e) {
-    const themeColor = this.data.banner[e.detail.current].themeColor ? this.data.banner[e.detail.current].themeColor : '#fff'
+    const currentBanner = this.data.banner[e.detail.current]
+    const themeColor = currentBanner.themeColor ? currentBanner.themeColor : '#fff'
+    const themeLightColor = currentBanner.themeLightColor ? currentBanner.themeLightColor : '#fff'
     let frontColor = '#ffffff'
     if (themeColor === '#fff' || themeColor === '#ffffff') {
       frontColor = '#000000'
@@ -199,7 +206,10 @@ Page({
       backgroundColor: themeColor,
     })
     this.setData({
-      topThemeColor: themeColor
+      topTheme: {
+        color: themeColor,
+        light: themeLightColor
+      }
     })
   },
   // 跳转至商品详情页

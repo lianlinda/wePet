@@ -3,6 +3,6 @@
   "navigationBarBackgroundColor": "#f32743",
   "navigationBarTextStyle": "white",
   "usingComponents": {
-    "van-cell": "@vant/weapp/cell"
+    "van-cell": "@vant/weapp/cell/index"
   }
 }

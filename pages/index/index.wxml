@@ -1,5 +1,5 @@
 <scroll-view class="m-index" scroll-y>
-    <view class="top" style="background: {{topThemeColor}}">
+    <view class="top" style="background: linear-gradient({{topTheme.color}}, {{topTheme.light}})">
       <van-search
         value="{{ value }}"
         shape="round"
@@ -8,17 +8,20 @@
         placeholder="请输入搜索关键词"
         bindtap="goSearch"
       />
-      <swiper
-        autoplay="{{bannerAutoPlay}}"
-        circular
-        interval="3000"
-        class="top__banner"
-        bindchange="onSwiperChange"
-      >
-        <swiper-item wx:for="{{banner}}" wx:key="id">
-          <image src='{{item.image}}' class='banner-image'/>
-        </swiper-item>
-      </swiper>
+      <view class="top">
+        <view class="bg-white haha">haha</view>
+        <swiper
+          autoplay="{{bannerAutoPlay}}"
+          circular
+          interval="3000"
+          class="top__banner"
+          bindchange="onSwiperChange"
+        >
+          <swiper-item wx:for="{{banner}}" wx:key="id">
+            <image src='{{item.image}}' class='banner-image'/>
+          </swiper-item>
+        </swiper>
+      </view>
     </view>
     <view class='group-container fs14'>
       <view class='group-title'>
