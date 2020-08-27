@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/cart/cart",
     "pages/mine/mine",
-    "pages/index/index",
     "pages/goods/detail/detail",
     "pages/search/search"
   ],
@@ -13,7 +13,7 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "color": "#bbb",
+    "color": "#6d7278",
     "selectedColor": "#e60a30",
     "list": [
       {

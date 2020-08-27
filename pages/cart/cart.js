@@ -6,8 +6,8 @@ Page({
    */
   data: {
     netOK: true,// 网络是否ok
-    isLogin: false,//是否登录
-    isEmpty: true,//购物车是否为空
+    isLogin: true,//是否登录
+    isEmpty: false,//购物车是否为空
     isEdit: false,//是否编辑
     radioColor: '#e60a30',
     sumMoney: 0,
@@ -132,11 +132,19 @@ Page({
     })
   },
 
+  onSubmit: function () {
+    wx.navigateTo({
+      url: '/pages/goods/detail/detail',
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    // wx.getUserInfo({
+    //   complete: (res) => {},
+    // })
   },
 
   /**

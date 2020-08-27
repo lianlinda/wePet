@@ -5,19 +5,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-    searchText: '搜索：商品 分类 品牌 国家', 
+    searchText: '搜索：商品 分类 品牌 国家',
+    topThemeColor: '#fff',
     banner: [
       {
         id: 1,
         image: 'https://img.alicdn.com/tfs/TB1_YIeaq5s3KVjSZFNXXcD3FXa-520-280.jpg_q90_.webp',
-        url: 'www.baidu.com'
+        url: 'www.baidu.com',
+        themeColor: '#00b33c'
       },
       {
-        id: 1,
+        id: 2,
         image: 'https://img.alicdn.com/tfs/TB1aQH0aECF3KVjSZJnXXbnHFXa-520-280.jpg_q90_.webp',
-        url: 'www.baidu.com'
+        url: 'www.baidu.com',
+        themeColor: '#862c86'
       }
     ],
+    bannerAutoPlay: false, // banner是否自动播放
     singleImage: {
       image: 'https://img.alicdn.com/simba/img/TB1N9hbaGSs3KVjSZPiSuwsiVXa.jpg',
       url: 'www.baidu.com',
@@ -118,15 +122,6 @@ Page({
     ]
   },
 
-  // 跳转至商品详情页
-  goGoodsDetail: function (e) {
-    //console.log(e.currentTarget.dataset.goodsId)
-    const goodsId = e.currentTarget.dataset.goodsId;
-    wx.navigateTo({
-      url: `/pages/goodsDetail/goodsDetail?goodsId=${goodsId}`
-    })
-  },
-
   /**
    * 生命周期函数--监听页面加载
    */
@@ -145,14 +140,18 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setData({
+      bannerAutoPlay: true
+    })
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+    this.setData({
+      bannerAutoPlay: false
+    })
   },
 
   /**
@@ -181,5 +180,34 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  // 去搜索页
+  goSearch() {
+    wx.navigateTo({
+      url: '/pages/search/search'
+    })
+  },
+  // swiper变化
+  onSwiperChange(e) {
+    const themeColor = this.data.banner[e.detail.current].themeColor ? this.data.banner[e.detail.current].themeColor : '#fff'
+    let frontColor = '#ffffff'
+    if (themeColor === '#fff' || themeColor === '#ffffff') {
+      frontColor = '#000000'
+    }
+    wx.setNavigationBarColor({
+      frontColor,
+      backgroundColor: themeColor,
+    })
+    this.setData({
+      topThemeColor: themeColor
+    })
+  },
+  // 跳转至商品详情页
+  goGoodsDetail: function (e) {
+    //console.log(e.currentTarget.dataset.goodsId)
+    const goodsId = e.currentTarget.dataset.goodsId;
+    wx.navigateTo({
+      url: `/pages/goodsDetail/goodsDetail?goodsId=${goodsId}`
+    })
+  },
 })

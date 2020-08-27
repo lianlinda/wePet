@@ -58,7 +58,7 @@
       </view>
     </view>
     <!--推荐商品-->
-    <view class='recommend-c'>
+    <!-- <view class='recommend-c'>
       <view class='tc fs14'>
         猜你喜欢
       </view>
@@ -69,7 +69,7 @@
           <view class='text-red text-center'>¥{{item.price}}</view>
         </view>
       </view>
-    </view>
+    </view> -->
     <!--底部合计-->
     <!-- <view class='bottom-c' wx:if="{{isLogin && !isEmpty}}">
       <view class='bottom-left'>

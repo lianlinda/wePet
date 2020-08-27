@@ -1,12 +1,25 @@
-<!--index.wxml-->
 <scroll-view class="m-index" scroll-y>
-  <view class='top-container'>
-    <van-search value="{{ value }}" placeholder="请输入搜索关键词" />
-    <swiper indicator-dots>
-      <swiper-item wx:for="{{banner}}" wx:key="id">
-        <image src='{{item.image}}' class='banner-image'/>
-      </swiper-item>
-    </swiper>
+    <view class="top" style="background: {{topThemeColor}}">
+      <van-search
+        value="{{ value }}"
+        shape="round"
+        background="{{topThemeColor}}"
+        readonly
+        placeholder="请输入搜索关键词"
+        bindtap="goSearch"
+      />
+      <swiper
+        autoplay="{{bannerAutoPlay}}"
+        circular
+        interval="3000"
+        class="top__banner"
+        bindchange="onSwiperChange"
+      >
+        <swiper-item wx:for="{{banner}}" wx:key="id">
+          <image src='{{item.image}}' class='banner-image'/>
+        </swiper-item>
+      </swiper>
+    </view>
     <view class='group-container fs14'>
       <view class='group-title'>
         今日拼团好物
@@ -21,7 +34,7 @@
         </view>
       </view>
     </view>
-  </view>
+
   <view wx:for='{{floorList}}' wx:key="id" wx:for-item="floor" class='floor mt-20'>
     <view class='floor-title fs14'>
       {{floor.name}}
