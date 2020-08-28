@@ -4,6 +4,7 @@
     "van-stepper": "@vant/weapp/stepper",
     "van-popup": "@vant/weapp/popup",
     "van-submit-bar": "@vant/weapp/submit-bar",
-    "van-button": "@vant/weapp/button"
+    "van-button": "@vant/weapp/button",
+    "van-checkbox": "@vant/weapp/checkbox/index"
   }
 }

@@ -1,66 +1,105 @@
 /**index.wxss**/
-.m-index {
+.p-index {
   height: 100%;
 }
-.top {
-  position: relative;
-}
-.haha {
-  position: absolute;
-  z-index: 100;
-  left: -20%;
-  content: '';
-  width: 140%;
-  height: 100rpx;
-  z-index: -1;
-  border-radius: 100% 100% 0 0;
-  background: #fff;
-}
-.top__banner {
-  width: 90%;
-  margin: 0 auto;
-}
-.banner-image{
-  width: 100%;
-  height: 250rpx;
+.p-index .round {
   border-radius: 16rpx;
 }
-.single-image {
-  width: 100%;
-  margin-top: 20rpx;
-}
-.group-title {
-  padding: 10rpx;
-}
-.group-goods{
-  display: flex;
-  padding: 10rpx;
-}
-.group-item {
-  text-align: center;
-  padding-right: 10rpx;
-}
-.group-image {
-  width: 200rpx;
-  height: 200rpx;
+.p-index .text-gray {
+  color: #6d7278;
 }
 
+.top .van-search {
+  padding: 20rpx;
+}
+.top__banner {
+  padding: 0 20rpx 20rpx;
+  height: 200rpx;
+  border-radius: 16rpx;
+}
+.top__banner swiper-item {
+  border-radius: 16rpx;
+}
+.top__banner .banner-image{
+  width: 100%;
+  height: 100%;
+  border-radius: 16rpx;
+}
+/* .single-image {
+  width: 100%;
+  margin-top: 20rpx;
+} */
+
+/* 拼团 */
+.group {
+  overflow: hidden;
+}
+.group-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+}
+
+.block-title {
+  display: inline-flex;
+  align-items: center;
+}
+.block-title::before {
+  display: inline-block;
+  content: '';
+  width: 8rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+  background: #fbdb1c;
+  border-radius: 10rpx;
+}
+.group-goods {
+  padding: 20rpx 0 20rpx 20rpx;
+  white-space: nowrap;
+}
+.group-item {
+  display: inline-block;
+  width: 150rpx;
+  padding-right: 20rpx;
+}
+.group-image {
+  width: 100%;
+  height: 150rpx;
+}
+
+/* 楼层 */
+.floor-title {
+  padding: 20rpx;
+}
 .goods-container {
   display: flex;
   flex-wrap: wrap;
-  padding: 10rpx;
+  padding: 10rpx 10rpx 10rpx 20rpx;
 }
 .floor .goods-image{
-  width: 200rpx;
-  height: 200rpx;
+  width: 100%;
+  height: 300rpx;
+  border-radius: 8rpx 8rpx 0 0;
+}
+.floor-image {
+  padding: 0 20rpx;
+  height: 250rpx;
+}
+.floor-image image {
+  width: 100%;
+  height: 100%;
 }
 .goods-item {
-  width: 50%;
-  text-align: center;
-  background: #fff;
+  width: calc(50% - 20rpx);
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+  margin-right: 20rpx;
+  border: 2rpx solid #F5F5F5;
+  border-radius: 8rpx;
 }
-.floor-title{
-  padding: 10rpx;
-  background: #fff;
-  text-align: center;
+.goods-item--threeColumns {
+  width: calc(33.33% - 20rpx);
+}
+.goods-item--threeColumns .goods-image {
+  height: 200rpx;
 }

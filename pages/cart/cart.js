@@ -9,7 +9,7 @@ Page({
     isLogin: true,//是否登录
     isEmpty: false,//购物车是否为空
     isEdit: false,//是否编辑
-    radioColor: '#e60a30',
+    checkboxColor: '#e60a30',
     sumMoney: 0,
     goods: [
       {

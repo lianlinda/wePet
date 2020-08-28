@@ -1,47 +1,47 @@
 <!--pages/shoppingBag/shoppingBag.wxml-->
 <scroll-view class='m-cart' scroll-y>
   <!--网速不好-->
-  <view wx:if="{{!netOK}}" class='h100 bg-white error-c'>
+  <view wx:if="{{!netOK}}" class='h-100 bg-white error-container'>
     <image class="empty" src="/static/img/cart/netError.png"/>
-    <view class='tc fs14 text-gray'>网络不太顺畅，请刷新试试</view>
+    <view class='mb20 tc fs14 text-gray'>网络不太顺畅，请刷新试试</view>
     <van-button round>重新加载</van-button>
   </view>
   <view wx:else>
     <!--没有登录-->
     <view wx:if="{{!isLogin}}" class='bg-white ptb100' style="text-align: center">
-      <image class="empty" src="/static/img/cart/empty.png"/>
+      <image class="empty-image" src="/static/img/cart/empty.png"/>
       <view class='tc fs14 text-gray'>登录后将显示您之前加入的商品</view>
-      <van-button round color="#e60a30">去登录</van-button>
+      <van-button round color="{{checkboxColor}}">去登录</van-button>
     </view>
     <view wx:else>
       <!--购物车是空的-->
-      <view wx:if="{{isEmpty}}" class='bg-white ptb100'>
-        <image class="empty" src="/static/img/cart/empty.png"/>
-        <view class='tc fs14 text-gray'>购物车空空荡荡，快去商城逛逛吧</view>
-        <button class='login-button btn'>去首页</button>
+      <view wx:if="{{isEmpty}}" class='bg-white ptb100 tc'>
+        <image class="empty-image" src="/static/img/cart/empty.png"/>
+        <view class='tc fs14 text-gray mb20'>购物车空空荡荡，快去商城逛逛吧</view>
+        <van-button>去首页</van-button>
       </view>
       <view wx:else>
         <!--有东西-->
-        <view class="fs14 mb20 bg-white top">
+        <view class="fs14 mb20 bg-white cart__top">
           <text class="iconfont icon-dizhi text-gray"/>
           <text class="text-gray ml10">地址栏</text>
           <text class="fr">编辑商品</text>
         </view>
-        <view class='mb20 fs14 shop-c' wx:for="{{goods}}" wx:key="id" wx:for-item="shop">
+        <view class='shop-c mb20 fs14 bg-white' wx:for="{{goods}}" wx:key="id" wx:for-item="shop">
           <view class="clearfix pb20 pr10">
             <view class="fl goods-wrap">
-              <radio color='{{radioColor}}'/>
-              <image class="shop-icon" src="{{shop.shopIcon}}" wx:if="{{shop.shopIcon}}"/>
-              <text class="iconfont icon-dianpu" wx:else/>
+              <van-checkbox value="{{ checked }}" checked-color="{{checkboxColor}}" bind:change="onChange" />
+              <image wx:if="{{shop.shopIcon}}" class="shop-icon" src="{{shop.shopIcon}}" />
+              <text wx:else class="iconfont icon-dianpu" />
               <text class="ml10">{{shop.shopName}}</text>
               <text class="iconfont icon-xuanze text-gray"/>
             </view>
             <text class='fr' wx:if="{{shop.coupon}}">领券</text>
           </view>
-          <view class="bg-white goods-c">
+          <view class="goods-c">
             <view wx:for="{{shop.list}}" wx:key="goodsId">
               <view class='goods-wrap pb20'>
-                <radio color='{{radioColor}}'/>
+                <van-checkbox class="ml10" value="{{ checked }}" checked-color="{{checkboxColor}}" bind:change="onChange" />
                 <image class='recommend-image' src="{{item.goodsImage}}"/>
                 <view class='goods-right'>
                   <view class='two-line-text'>{{item.goodsName}}</view>
@@ -71,13 +71,6 @@
       </view>
     </view> -->
     <!--底部合计-->
-    <!-- <view class='bottom-c' wx:if="{{isLogin && !isEmpty}}">
-      <view class='bottom-left'>
-        <radio color='{{radioColor}}'/><label>全选</label>
-        <text class='fr'>合计：{{sumMoney}}</text>
-      </view>
-      <button class='btn pay'>结算</button>
-    </view> -->
     <van-submit-bar
       wx:if="{{isLogin && !isEmpty}}"
       price="{{ 3050 }}"

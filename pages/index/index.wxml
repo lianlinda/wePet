@@ -1,53 +1,62 @@
-<scroll-view class="m-index" scroll-y>
-    <view class="top" style="background: linear-gradient({{topTheme.color}}, {{topTheme.light}})">
+<scroll-view class="p-index" scroll-y>
+  <view class="top">
+    <van-sticky>
       <van-search
         value="{{ value }}"
         shape="round"
-        background="{{topThemeColor}}"
         readonly
         placeholder="请输入搜索关键词"
         bindtap="goSearch"
       />
-      <view class="top">
-        <view class="bg-white haha">haha</view>
-        <swiper
-          autoplay="{{bannerAutoPlay}}"
-          circular
-          interval="3000"
-          class="top__banner"
-          bindchange="onSwiperChange"
-        >
-          <swiper-item wx:for="{{banner}}" wx:key="id">
-            <image src='{{item.image}}' class='banner-image'/>
-          </swiper-item>
-        </swiper>
-      </view>
+    </van-sticky>
+    <swiper
+      autoplay
+      circular
+      interval="3000"
+      class="top__banner bg-white"
+    >
+      <swiper-item wx:for="{{banner}}" wx:key="id">
+        <image src='{{item.image}}' class="banner-image"/>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 拼团 -->
+  <view class="group fs14 round bg-white m20">
+    <view class="group-title">
+      <view class="block-title">今日拼团好物</view>
+      <text class="text-gray">更多<text class="iconfont icon-xuanze fs14 text-gray" /></text>
     </view>
-    <view class='group-container fs14'>
-      <view class='group-title'>
-        今日拼团好物
-        <text class='fr'>更多</text>
-      </view>
-      <view class='group-goods fs14'>
-        <view wx:for="{{group}}" wx:key="id" class='group-item' bindtap='goGoodsDetail' data-goods-id="{{item.id}}">
-          <image src='{{item.goodsImage}}' class='group-image'/>
-          <view class='two-line-text'>{{item.goodsName}}</view>
-          <view class='text-red'>拼团价：¥{{item.groupPrice}}</view>
-          <text class='text-red'>¥{{item.goodsPrice}}</text>
+    <scroll-view scroll-x class='group-goods fs14'>
+      <view wx:for="{{group}}" wx:key="id" class='group-item' data-id="{{item.id}}">
+        <image src='{{item.image}}' class='group-image'/>
+        <view class="tc">
+          <view class='text-red'>¥{{item.groupPrice}}</view>
+          <text class='text-gray fs12 delete-text'>¥{{item.price}}</text>
         </view>
       </view>
-    </view>
+    </scroll-view>
+  </view>
 
-  <view wx:for='{{floorList}}' wx:key="id" wx:for-item="floor" class='floor mt-20'>
-    <view class='floor-title fs14'>
-      {{floor.name}}
-      <text class='fr'>更多</text>
+  <view wx:for="{{floorList}}" wx:key="index" wx:for-item="floor" class="floor m20 round bg-white">
+    <view class="floor-title fs14">
+      <view class="block-title">{{floor.name}}</view>
+      <text class="fr text-gray">更多<text class="iconfont icon-xuanze fs14 text-gray" /></text>
     </view>
-    <view class='goods-container fs14'>
-      <view wx:for='{{floor.goodsList}}' wx:key="goodsId" wx:for-item="goods" class='goods-item' bindtap='goGoodsDetail' data-goods-id="{{item.goodsId}}">
-        <image src='{{goods.goodsImage}}' class='goods-image'/>
-        <view class='two-line-text'>{{goods.goodsName}}</view>
-        <text class='text-red'>¥{{goods.goodsPrice}}</text>
+    <view wx:if="{{floor.image}}" class="floor-image">
+      <image src="{{floor.image}}" />
+    </view>
+    <view class="goods-container fs14">
+      <view
+        wx:for='{{floor.goodsList}}'
+        wx:key="index"
+        wx:for-item="goods"
+        class="goods-item {{'goods-item--' + floor.type}}"
+        bindtap='goDetail'
+        data-id="{{item.id}}"
+      >
+        <image src='{{goods.image}}' class='goods-image'/>
+        <view class='two-line-text'>{{goods.name}}</view>
+        <text class='text-red'>¥{{goods.price}}</text>
       </view>
     </view>
   </view>

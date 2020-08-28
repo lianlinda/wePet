@@ -6,27 +6,18 @@ Page({
    */
   data: {
     searchText: '搜索：商品 分类 品牌 国家',
-    topTheme: {
-      color: '#fff',
-      light: '#fff'
-    },
     banner: [
       {
         id: 1,
         image: 'https://img.alicdn.com/tfs/TB1_YIeaq5s3KVjSZFNXXcD3FXa-520-280.jpg_q90_.webp',
         url: 'www.baidu.com',
-        themeColor: '#00b33c',
-        themeLightColor: '#80ffaa'
       },
       {
         id: 2,
         image: 'https://img.alicdn.com/tfs/TB1aQH0aECF3KVjSZJnXXbnHFXa-520-280.jpg_q90_.webp',
         url: 'www.baidu.com',
-        themeColor: '#862c86',
-        themeLightColor: '#e6b2e6'
       }
     ],
-    bannerAutoPlay: false, // banner是否自动播放
     singleImage: {
       image: 'https://img.alicdn.com/simba/img/TB1N9hbaGSs3KVjSZPiSuwsiVXa.jpg',
       url: 'www.baidu.com',
@@ -37,66 +28,99 @@ Page({
       {
         id: 1,
         groupPrice: 12,
-        goodsPrice: 24,
+        price: 24,
         groupPerson: 2,
-        goodsImage: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i3/247100163/O1CN01bEgzYp1D4h36iyCjs_!!0-saturn_solar.jpg_250x250.jpg_.webp',
-        goodsName: '可乐可乐 无糖无糖 可乐可乐 无糖无糖'
+        image: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i3/247100163/O1CN01bEgzYp1D4h36iyCjs_!!0-saturn_solar.jpg_250x250.jpg_.webp',
+        name: '可乐可乐 无糖无糖 可乐可乐 无糖无糖'
       },
       {
         id: 2,
         groupPrice: 12,
-        goodsPrice: 24,
+        price: 24,
         groupPerson: 2,
-        goodsImage: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i3/247100163/O1CN01bEgzYp1D4h36iyCjs_!!0-saturn_solar.jpg_250x250.jpg_.webp',
-        goodsName: '可乐可乐 无糖无糖 可乐可乐 无糖无糖'
+        image: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i3/247100163/O1CN01bEgzYp1D4h36iyCjs_!!0-saturn_solar.jpg_250x250.jpg_.webp',
+        name: '可乐可乐 无糖无糖 可乐可乐 无糖无糖'
+      },
+      {
+        id: 2,
+        groupPrice: 12,
+        price: 24,
+        groupPerson: 2,
+        image: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i3/247100163/O1CN01bEgzYp1D4h36iyCjs_!!0-saturn_solar.jpg_250x250.jpg_.webp',
+        name: '可乐可乐 无糖无糖 可乐可乐 无糖无糖'
+      },
+      {
+        id: 2,
+        groupPrice: 12,
+        price: 24,
+        groupPerson: 2,
+        image: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i3/247100163/O1CN01bEgzYp1D4h36iyCjs_!!0-saturn_solar.jpg_250x250.jpg_.webp',
+        name: '可乐可乐 无糖无糖 可乐可乐 无糖无糖'
+      },
+      {
+        id: 2,
+        groupPrice: 12,
+        price: 24,
+        groupPerson: 2,
+        image: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i3/247100163/O1CN01bEgzYp1D4h36iyCjs_!!0-saturn_solar.jpg_250x250.jpg_.webp',
+        name: '可乐可乐 无糖无糖 可乐可乐 无糖无糖'
       }
     ],
     floorList: [
       {
         id: 1,
         name: '新品首发',
+        type: 'twoColumns',
         goodsList: [
           {
-            goodsId: 1,
-            goodsName: '可乐可乐 无糖无糖 可乐可乐 无糖无糖',
-            goodsImage: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i3/247100163/O1CN01bEgzYp1D4h36iyCjs_!!0-saturn_solar.jpg_250x250.jpg_.webp',
-            goodsPrice: 2
+            id: 1,
+            name: '可乐可乐 无糖无糖 可乐可乐 无糖无糖',
+            image: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i3/247100163/O1CN01bEgzYp1D4h36iyCjs_!!0-saturn_solar.jpg_250x250.jpg_.webp',
+            price: 2
           },
           {
-            goodsId: 1,
-            goodsName: '可乐可乐 无糖无糖 可乐可乐 无糖无糖',
-            goodsImage: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i3/247100163/O1CN01bEgzYp1D4h36iyCjs_!!0-saturn_solar.jpg_250x250.jpg_.webp',
-            goodsPrice: 2
+            id: 1,
+            name: '可乐可乐 无糖无糖 可乐可乐 无糖无糖',
+            image: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i3/247100163/O1CN01bEgzYp1D4h36iyCjs_!!0-saturn_solar.jpg_250x250.jpg_.webp',
+            price: 2
           },
           {
-            goodsId: 1,
-            goodsName: '可乐可乐 无糖无糖 可乐可乐 无糖无糖',
-            goodsImage: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i3/247100163/O1CN01bEgzYp1D4h36iyCjs_!!0-saturn_solar.jpg_250x250.jpg_.webp',
-            goodsPrice: 2
+            id: 1,
+            name: '可乐可乐 无糖无糖 可乐可乐 无糖无糖',
+            image: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i3/247100163/O1CN01bEgzYp1D4h36iyCjs_!!0-saturn_solar.jpg_250x250.jpg_.webp',
+            price: 2
           }
         ]
       },
       {
         id: 2,
         name: '居家生活',
+        type: 'threeColumns',
+        image: 'https://img.alicdn.com/tfs/TB11mOyhRFR4u4jSZFPXXanzFXa-520-280.jpg_q90_.webp',
         goodsList: [
           {
-            goodsId: 1,
-            goodsName: '可乐可乐 无糖无糖 可乐可乐 无糖无糖',
-            goodsImage: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i3/247100163/O1CN01bEgzYp1D4h36iyCjs_!!0-saturn_solar.jpg_250x250.jpg_.webp',
-            goodsPrice: 2
+            id: 1,
+            name: '可乐可乐 无糖无糖 可乐可乐 无糖无糖',
+            image: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i3/247100163/O1CN01bEgzYp1D4h36iyCjs_!!0-saturn_solar.jpg_250x250.jpg_.webp',
+            price: 2
           },
           {
-            goodsId: 1,
-            goodsName: '可乐可乐 无糖无糖 可乐可乐 无糖无糖',
-            goodsImage: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i3/247100163/O1CN01bEgzYp1D4h36iyCjs_!!0-saturn_solar.jpg_250x250.jpg_.webp',
-            goodsPrice: 2
+            id: 1,
+            name: '可乐可乐 无糖无糖 可乐可乐 无糖无糖',
+            image: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i3/247100163/O1CN01bEgzYp1D4h36iyCjs_!!0-saturn_solar.jpg_250x250.jpg_.webp',
+            price: 2
           },
           {
-            goodsId: 1,
-            goodsName: '可乐可乐 无糖无糖 可乐可乐 无糖无糖',
-            goodsImage: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i3/247100163/O1CN01bEgzYp1D4h36iyCjs_!!0-saturn_solar.jpg_250x250.jpg_.webp',
-            goodsPrice: 2
+            id: 1,
+            name: '可乐可乐 无糖无糖 可乐可乐 无糖无糖',
+            image: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i3/247100163/O1CN01bEgzYp1D4h36iyCjs_!!0-saturn_solar.jpg_250x250.jpg_.webp',
+            price: 2
+          },
+          {
+            id: 1,
+            name: '可乐可乐 无糖无糖 可乐可乐 无糖无糖',
+            image: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i3/247100163/O1CN01bEgzYp1D4h36iyCjs_!!0-saturn_solar.jpg_250x250.jpg_.webp',
+            price: 2
           }
         ]
       },
@@ -105,22 +129,22 @@ Page({
         name: '餐厨用品',
         goodsList: [
           {
-            goodsId: 1,
-            goodsName: '可乐可乐 无糖无糖 可乐可乐 无糖无糖',
-            goodsImage: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i3/247100163/O1CN01bEgzYp1D4h36iyCjs_!!0-saturn_solar.jpg_250x250.jpg_.webp',
-            goodsPrice: 2
+            id: 1,
+            name: '可乐可乐 无糖无糖 可乐可乐 无糖无糖',
+            image: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i3/247100163/O1CN01bEgzYp1D4h36iyCjs_!!0-saturn_solar.jpg_250x250.jpg_.webp',
+            price: 2
           },
           {
-            goodsId: 1,
-            goodsName: '可乐可乐 无糖无糖 可乐可乐 无糖无糖',
-            goodsImage: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i3/247100163/O1CN01bEgzYp1D4h36iyCjs_!!0-saturn_solar.jpg_250x250.jpg_.webp',
-            goodsPrice: 2
+            id: 1,
+            name: '可乐可乐 无糖无糖 可乐可乐 无糖无糖',
+            image: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i3/247100163/O1CN01bEgzYp1D4h36iyCjs_!!0-saturn_solar.jpg_250x250.jpg_.webp',
+            price: 2
           },
           {
-            goodsId: 1,
-            goodsName: '可乐可乐 无糖无糖 可乐可乐 无糖无糖',
-            goodsImage: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i3/247100163/O1CN01bEgzYp1D4h36iyCjs_!!0-saturn_solar.jpg_250x250.jpg_.webp',
-            goodsPrice: 2
+            id: 1,
+            name: '可乐可乐 无糖无糖 可乐可乐 无糖无糖',
+            image: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i3/247100163/O1CN01bEgzYp1D4h36iyCjs_!!0-saturn_solar.jpg_250x250.jpg_.webp',
+            price: 2
           }
         ]
       }
@@ -145,18 +169,14 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.setData({
-      bannerAutoPlay: true
-    })
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-    this.setData({
-      bannerAutoPlay: false
-    })
+
   },
 
   /**
@@ -192,32 +212,12 @@ Page({
       url: '/pages/search/search'
     })
   },
-  // swiper变化
-  onSwiperChange(e) {
-    const currentBanner = this.data.banner[e.detail.current]
-    const themeColor = currentBanner.themeColor ? currentBanner.themeColor : '#fff'
-    const themeLightColor = currentBanner.themeLightColor ? currentBanner.themeLightColor : '#fff'
-    let frontColor = '#ffffff'
-    if (themeColor === '#fff' || themeColor === '#ffffff') {
-      frontColor = '#000000'
-    }
-    wx.setNavigationBarColor({
-      frontColor,
-      backgroundColor: themeColor,
-    })
-    this.setData({
-      topTheme: {
-        color: themeColor,
-        light: themeLightColor
-      }
-    })
-  },
   // 跳转至商品详情页
-  goGoodsDetail: function (e) {
-    //console.log(e.currentTarget.dataset.goodsId)
-    const goodsId = e.currentTarget.dataset.goodsId;
+  goDetail: function (e) {
+    //console.log(e.currentTarget.dataset.id)
+    const id = e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: `/pages/goodsDetail/goodsDetail?goodsId=${goodsId}`
+      url: `/pages/goods/detail/detail?id=${id}`
     })
   },
 })
