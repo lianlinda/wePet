@@ -20,12 +20,12 @@
         <view class='tc fs14 text-gray mb20'>购物车空空荡荡，快去商城逛逛吧</view>
         <van-button>去首页</van-button>
       </view>
-      <view wx:else>
+      <view wx:else class="pb100">
         <!--有东西-->
         <view class="fs14 mb20 bg-white cart__top">
           <text class="iconfont icon-dizhi text-gray"/>
           <text class="text-gray ml10">地址栏</text>
-          <text class="fr">编辑商品</text>
+          <text class="fr">管理</text>
         </view>
         <view class='shop-c mb20 fs14 bg-white' wx:for="{{goods}}" wx:key="id" wx:for-item="shop">
           <view class="clearfix pb20 pr10">

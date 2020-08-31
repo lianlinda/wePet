@@ -6,6 +6,9 @@
 .ptb100{
   padding: 100rpx 0;
 }
+.pb100 {
+  padding-bottom: 100rpx;
+}
 /* 错误信息 */
 .error-container {
   display: flex;
@@ -25,7 +28,8 @@
 }
 /* 每个店铺的商品集合 */
 .shop-c {
-  padding: 0 20rpx;
+  margin: 0 20rpx 20rpx;
+  padding: 20rpx 20rpx 0;
   border-radius: 16rpx;
 }
 .shop-icon {

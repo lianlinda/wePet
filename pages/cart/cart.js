@@ -50,6 +50,21 @@ Page({
             goodsPrice: 1
           }
         ]
+      },
+      {
+        id: 3,
+        shopId: 2,
+        shopName: '旗舰店',
+        shopIcon: null,
+        list: [
+          {
+            goodsId: 2,
+            goodsName: '可乐可乐 无糖无糖 可乐可乐 无糖无糖',
+            goodsNum: 2,
+            goodsImage: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i3/247100163/O1CN01bEgzYp1D4h36iyCjs_!!0-saturn_solar.jpg_250x250.jpg_.webp',
+            goodsPrice: 1
+          }
+        ]
       }
     ],
     recommendGoods: [
