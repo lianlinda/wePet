@@ -41,8 +41,14 @@ page {
 .mt20 {
   margin-top: 20rpx;
 }
+.mb10 {
+  margin-bottom: 10rpx;
+}
 .mb20{
   margin-bottom: 20rpx;
+}
+.mr10 {
+  margin-right: 10rpx;
 }
 
 /*文字类-布局信息*/
@@ -66,6 +72,9 @@ page {
 }
 .fs16{
   font-size: 32rpx;
+}
+.fs22 {
+  font-size: 44rpx;
 }
 .fs30{
   font-size: 60rpx;

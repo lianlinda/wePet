@@ -5,15 +5,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-    showTopTab: true,//是否显示顶部导航栏
+    showTopTab: false,//是否显示顶部导航栏
     showSelect: false,//是否显示选择区
     toView: 'goods',
-    goodsInfo: {
-      goodsId: 1,
-      goodsName: '可乐可乐 无糖无糖 可乐可乐 无糖无糖',
-      goodsPrice: 2,
-      goodStand: '瓶装',
-      mainImage: [{
+    info: { // 商品信息
+      id: 1,
+      name: '可乐可乐 无糖无糖 可乐可乐 无糖无糖可乐可乐 无糖无糖可乐可乐 无糖无糖可乐可乐 无糖无糖',
+      price: 2,
+      stand: '瓶装',
+      banner: [{
+        id: 1,
+        url: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i3/247100163/O1CN01bEgzYp1D4h36iyCjs_!!0-saturn_solar.jpg_250x250.jpg_.webp'
+      }, {
+        id: 2,
+        url: 'https://img.alicdn.com/simba/img/TB1N9hbaGSs3KVjSZPiSuwsiVXa.jpg'
+      }],
+      detailImages: [{
         id: 1,
         url: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i3/247100163/O1CN01bEgzYp1D4h36iyCjs_!!0-saturn_solar.jpg_250x250.jpg_.webp'
       }, {
@@ -21,14 +28,7 @@ Page({
         url: 'https://img.alicdn.com/simba/img/TB1N9hbaGSs3KVjSZPiSuwsiVXa.jpg'
       }]
     },
-    detailImages: [{
-      id: 1,
-      url: 'https://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i3/247100163/O1CN01bEgzYp1D4h36iyCjs_!!0-saturn_solar.jpg_250x250.jpg_.webp'
-    }, {
-      id: 2,
-      url: 'https://img.alicdn.com/simba/img/TB1N9hbaGSs3KVjSZPiSuwsiVXa.jpg'
-    }],
-    commentInfo: {
+    comment: { // 评价
       num: 10,
       commentList: [{
         userId: 1,

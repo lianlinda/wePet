@@ -62,5 +62,11 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  goOrderList() {
+    wx.navigateTo({
+      url: '/pages/order/list/list'
+    })
   }
 })

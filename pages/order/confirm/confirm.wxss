@@ -1,0 +1,4 @@
+/* pages/order/confirm/confirm.wxss */
+.round {
+  border-radius: 16rpx;
+}

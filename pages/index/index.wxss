@@ -15,7 +15,6 @@
 .top__banner {
   padding: 0 20rpx 20rpx;
   height: 200rpx;
-  border-radius: 16rpx;
 }
 .top__banner swiper-item {
   border-radius: 16rpx;

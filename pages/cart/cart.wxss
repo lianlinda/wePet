@@ -35,7 +35,6 @@
 .shop-icon {
   width: 30rpx;
   height: 30rpx;
-  margin-left: 10rpx;
 }
 .goods-c{
   padding: 20rpx 0 0;

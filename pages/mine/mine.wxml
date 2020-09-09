@@ -38,7 +38,7 @@
           <view class="iconfont icon-tuikuan"/>
           退款/售后
         </view>
-        <view class='order-list__item order-list__item--all'>
+        <view class='order-list__item order-list__item--all' data-tab="all" bindtap="goOrderList">
           <view class="iconfont icon-order"/>
           全部订单
         </view>

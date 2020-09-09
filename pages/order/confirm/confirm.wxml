@@ -1,0 +1,20 @@
+<view>
+  <!-- 配送地址信息 -->
+  <view class="round">
+    配送地址
+  </view>
+  <!-- 商品信息 -->
+  <view class="round mt20" v-for="{{list}}">
+
+  </view>
+  <!-- 优惠信息 -->
+  <view>
+
+  </view>
+  
+  <van-submit-bar
+    price="{{ 3050 }}"
+    button-text="提交订单"
+    bind:submit="onSubmit"
+  />
+</view>

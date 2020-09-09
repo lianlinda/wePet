@@ -2,8 +2,10 @@
 .m-goods-detail{
   height: 100%;
   padding-bottom: 110rpx;
+  font-size: 28rpx;
 }
 
+/* 顶部导航栏 */
 .top-tap{
   position: fixed;
   width: 100%;
@@ -21,7 +23,10 @@
   color: #e60a30;
   border-bottom: 2px solid #e60a30;
 }
-
+/* banner */
+#goods {
+  height: 600rpx;
+}
 .banner-image{
   width: 100%;
   height: 100%;
@@ -29,13 +34,24 @@
 
 .container{
   background: #fff;
-  padding: 10rpx;
+  padding: 20rpx;
 }
-
+/* 商品信息 */
+.goods-info__price {
+  display: flex;
+  justify-content: space-between;
+}
+.goods-select-item {
+  padding: 10rpx 0;
+  border-bottom: 2rpx solid #F6F6F6;
+}
+.goods-select-item:last-child {
+  border: none;
+}
+/* 商品推荐 */
 .recommend-goods-container{
   display: flex;
 }
-
 .recommend-item {
   width: 33.3%;
   padding: 20rpx;
@@ -44,37 +60,20 @@
   width: 200rpx;
   height: 200rpx;
 }
-
+/* 商品详情 */
 .detail-container{
+  padding-top: 20rpx;
   background: #fff;
 }
+.detail-title {
+  margin-bottom: 20rpx;
+  padding: 0 20rpx;
+  font-size: 32rpx;
+}
 
-.goods-detail-image{
+.goods-detail-image {
+  display: block;
   width: 100%;
-}
-
-.bottom-zone{
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  display: flex;
-  background: #fff;
-  height: 110rpx;
-}
-
-.bottom-left{
-  flex-grow: 1;
-  text-align: center;
-  padding: 5rpx;
-}
-.bottom-icon{
-  width: 32rpx;
-  height: 32rpx;
-}
-.bottom-btn{
-  flex-grow: 1;
-  padding: 0;
-  border-radius: 0;
 }
 
 .select-zone{

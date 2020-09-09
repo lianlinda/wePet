@@ -1,17 +1,13 @@
-// pages/search/search.js
+// pages/order/confirm/confirm.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    hotList: [{
-      value: '柯基',
-      isHot: true,
-    }, {
-      value: '柴犬'
-    }],
-    history: ['衣服', '玩具']
+    list: [{
+      
+    }]
   },
 
   /**

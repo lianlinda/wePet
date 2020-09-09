@@ -1,1 +1,23 @@
 /* pages/search/search.wxss */
+Page {
+  background: #fff;
+}
+.m-search {
+  font-size: 28rpx;
+}
+.hot, .history {
+  padding: 20rpx 20rpx 0;
+}
+.hot-title, .history-title {
+  padding-bottom: 10rpx;
+}
+.hot-list, .history-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.hot-list-item, .history-list-item {
+  padding: 10rpx 20rpx;
+  margin-right: 20rpx;
+  background: #f7f8fa;
+  border-radius: 40rpx;
+}

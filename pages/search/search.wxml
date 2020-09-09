@@ -1,2 +1,22 @@
-<!--pages/search/search.wxml-->
-<text>pages/search/search.wxml  hahaha</text>
+<view class="m-search">
+  <van-search
+    shape="round"
+    show-action
+  />
+  <view class="hot">
+    <view class="hot-title">热门搜索</view>
+    <view class="hot-list">
+      <view class="hot-list-item" wx:for="{{hotList}}" wx:key="index">
+        <view>{{item.value}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="history">
+    <view class="history-title">历史搜索</view>
+    <view class="history-list">
+      <view class="history-list-item" wx:for="{{history}}" wx:key="index">
+        <view>{{item}}</view>
+      </view>
+    </view>
+  </view>
+</view>

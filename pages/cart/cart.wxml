@@ -30,7 +30,7 @@
         <view class='shop-c mb20 fs14 bg-white' wx:for="{{goods}}" wx:key="id" wx:for-item="shop">
           <view class="clearfix pb20 pr10">
             <view class="fl goods-wrap">
-              <van-checkbox value="{{ checked }}" checked-color="{{checkboxColor}}" bind:change="onChange" />
+              <van-checkbox class="mr10" value="{{ checked }}" checked-color="{{checkboxColor}}" bind:change="onChange" />
               <image wx:if="{{shop.shopIcon}}" class="shop-icon" src="{{shop.shopIcon}}" />
               <text wx:else class="iconfont icon-dianpu" />
               <text class="ml10">{{shop.shopName}}</text>
@@ -39,16 +39,16 @@
             <text class='fr' wx:if="{{shop.coupon}}">领券</text>
           </view>
           <view class="goods-c">
-            <view wx:for="{{shop.list}}" wx:key="goodsId">
+            <view wx:for="{{shop.list}}" wx:key="id">
               <view class='goods-wrap pb20'>
-                <van-checkbox class="ml10" value="{{ checked }}" checked-color="{{checkboxColor}}" bind:change="onChange" />
-                <image class='recommend-image' src="{{item.goodsImage}}"/>
+                <van-checkbox class="mr10" value="{{ checked }}" checked-color="{{checkboxColor}}" bind:change="onChange" />
+                <image class='recommend-image' src="{{item.image}}"/>
                 <view class='goods-right'>
-                  <view class='two-line-text'>{{item.goodsName}}</view>
-                  <view wx:if="{{item.goodStand}}" class="stand-s">{{item.goodStand}}</view>
+                  <view class='two-line-text'>{{item.name}}</view>
+                  <view wx:if="{{item.stand}}" class="stand-s">{{item.stand}}</view>
                   <view>
-                    <text class='text-red'>¥{{item.goodsPrice}}</text>
-                    <van-stepper class="fr" value="{{ item.goodsNum }}"/>
+                    <text class='text-red'>¥{{item.price}}</text>
+                    <van-stepper class="fr" value="{{ item.num }}"/>
                   </view>
                 </view>
               </view>
@@ -73,7 +73,7 @@
     <!--底部合计-->
     <van-submit-bar
       wx:if="{{isLogin && !isEmpty}}"
-      price="{{ 3050 }}"
+      price="{{ 0 }}"
       button-text="结算"
       bind:submit="onSubmit"
     ></van-submit-bar>
